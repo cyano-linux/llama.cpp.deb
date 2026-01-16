@@ -1,0 +1,22 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Build
+        run: |
+          podman run --rm -v $PWD:/mnt -w /mnt \
+            docker.io/amd64/debian:13 \
+            bash -c "./dep.sh && ./build.sh"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Debian package
+          path: "*.deb"

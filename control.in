@@ -1,0 +1,10 @@
+Section: devel
+Priority: optional
+Maintainer: c@cyano.cn
+Standards-Version: 4.3.0
+Homepage: https://github.com/ggml-org/llama.cpp
+Package: llama.cpp
+Version: __VERSION__
+Architecture: amd64
+Depends: libcublas12, libcuda1, libcudart12, libgomp1, libopenblas0, libvulkan1
+Description: LLM inference in C/C++
