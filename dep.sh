@@ -13,5 +13,5 @@ env DEBIAN_FRONTEND=noninteractive \
   apt install -y --no-install-recommends \
     build-essential cmake git pkgconf \
     libopenblas-dev \
-    libvulkan-dev glslc \
+    libvulkan-dev glslc spirv-headers \
     nvidia-cuda-toolkit
