@@ -11,7 +11,7 @@ sed -i -e 's/^Components: .*$/Components: main contrib non-free/' /etc/apt/sourc
 apt update
 env DEBIAN_FRONTEND=noninteractive \
   apt install -y --no-install-recommends \
-    build-essential cmake git pkgconf \
+    build-essential cmake git nodejs npm pkgconf \
     libopenblas-dev \
     libvulkan-dev glslc spirv-headers \
     nvidia-cuda-toolkit
